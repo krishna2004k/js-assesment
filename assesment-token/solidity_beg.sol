@@ -1,4 +1,3 @@
-
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.18;
 
@@ -19,21 +18,21 @@ pragma solidity 0.8.18;
 contract Token {
 
     // public variables here
-    string public name = "brave" ;
-    string public symbol="$$" ;
+    string public name_ = "turtle" ;
+    string public symbols_="##" ;
     uint public totalSupply=0 ;
     // mapping variable here
     mapping(address=>uint) public balances ;
     // mint function
-    function mint(address sender, uint value) public {
-        totalSupply += value;
-        balances[sender] += value;
+    function mint(address sender, uint _value) public {
+        totalSupply += _value;
+        balances[sender] += _value;
     }
     // burn function
     function burn(address sender, uint value) public {
-        if(balances[sender]>= value){
-        totalSupply -= value;
-        balances[sender]-= value;
+        if(balances[sender]>= _value){
+        totalSupply -= _value;
+        balances[sender]-= _value;
         }
     }
 }
