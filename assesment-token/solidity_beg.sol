@@ -29,7 +29,7 @@ contract Token {
         balances[sender] += _value;
     }
     // burn function
-    function burn(address sender, uint value) public {
+    function burn(address sender, uint _value) public {
         if(balances[sender]>= _value){
         totalSupply -= _value;
         balances[sender]-= _value;
