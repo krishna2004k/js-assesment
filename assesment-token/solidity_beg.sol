@@ -24,15 +24,15 @@ contract Token {
     // mapping variable here
     mapping(address=>uint) public balances ;
     // mint function
-    function mint(address sender, uint _value) public {
+    function mint(address _sender, uint _value) public {
         totalSupply += _value;
-        balances[sender] += _value;
+        balances[_sender] += _value;
     }
     // burn function
-    function burn(address sender, uint _value) public {
-        if(balances[sender]>= _value){
+    function burn(address _sender, uint _value) public {
+        if(balances[_sender]>= _value){
         totalSupply -= _value;
-        balances[sender]-= _value;
+        balances[_sender]-= _value;
         }
     }
 }
