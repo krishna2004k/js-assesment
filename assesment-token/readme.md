@@ -24,6 +24,7 @@ Once you are on the Remix website, create a new file by clicking on the "+" icon
 ```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.18;
+
 /*
        REQUIREMENTS
     1. Your contract will have public variables that store the details about your coin (Token Name, Token Abbrv., Total Supply)
@@ -37,23 +38,25 @@ pragma solidity 0.8.18;
     5. Lastly, your burn function should have conditionals to make sure the balance of "sender" is greater than or equal 
        to the amount that is supposed to be burned.
 */
-contract MyToken {
+
+contract Token {
+
     // public variables here
-    string public name = "brave" ;
-    string public symbol="$$" ;
+    string public name_ = "turtle" ;
+    string public symbols_="##" ;
     uint public totalSupply=0 ;
     // mapping variable here
     mapping(address=>uint) public balances ;
     // mint function
-    function mint(address sender, uint value) public {
-        totalSupply += value;
-        balances[sender] += value;
+    function mint(address _sender, uint _value) public {
+        totalSupply += _value;
+        balances[_sender] += _value;
     }
     // burn function
-    function burn(address sender, uint value) public {
-        if(balances[sender]>= value){
-        totalSupply -= value;
-        balances[sender]-= value;
+    function burn(address _sender, uint _value) public {
+        if(balances[_sender]>= _value){
+        totalSupply -= _value;
+        balances[_sender]-= _value;
         }
     }
 }
