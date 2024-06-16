@@ -1,17 +1,17 @@
 # MyToken Smart Contract 
 
-This Solidity program is a simple "MyToken Smart Contract" program that demonstrates the Data Types,Mapping in Solidity,Conditional Statements and functionality of minting and burning of tokens from users account.
+Program  of solidity is a simple "Smart Contract myToken " program that demonstrates the Data Types,Mapping in Solidity,Conditional Statements and functionality of minting and burning of tokens from users account.
 
 ## Contract Overview
 The contract includes the following features:
 
-1. Public variables to store token details (name, symbol, and total supply)
+1. To store token details of public variables   (name, symbol, and total supply)
 
 2. A mapping to store balances of addresses
 
-3. A mint function to create new tokens and assign them to an address
+3. To create new tokens and assign them to an address use  mint function
 
-4. A burn function to destroy tokens from an address with balance checks
+4. To destroy tokens from an address with balance checks use a burn function
 
 ## Getting Started
 
@@ -69,7 +69,7 @@ Once the code is compiled, you can deploy the contract by clicking on the "Deplo
 Once the contract is deployed, you can interact with it by calling the functions. 
 
 ## Authors
-aryan09
+krishna2004
 
 
 ## License
